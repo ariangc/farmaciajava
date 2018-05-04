@@ -17,6 +17,7 @@ public class PantallaAdmin extends javax.swing.JFrame {
      */
     public PantallaAdmin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -39,7 +40,7 @@ public class PantallaAdmin extends javax.swing.JFrame {
         botonUsuarios = new javax.swing.JButton();
         botonOrdenes = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
-        botonDescuentos1 = new javax.swing.JButton();
+        botonReporte = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -121,11 +122,11 @@ public class PantallaAdmin extends javax.swing.JFrame {
             }
         });
 
-        botonDescuentos1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        botonDescuentos1.setText("Reporte");
-        botonDescuentos1.addActionListener(new java.awt.event.ActionListener() {
+        botonReporte.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        botonReporte.setText("Reporte");
+        botonReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonDescuentos1ActionPerformed(evt);
+                botonReporteActionPerformed(evt);
             }
         });
 
@@ -158,7 +159,7 @@ public class PantallaAdmin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botonDescuentos, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botonProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonDescuentos1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(botonReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(botonRegresar)))
@@ -187,7 +188,7 @@ public class PantallaAdmin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonDescuentos1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(botonRegresar)
                 .addContainerGap(12, Short.MAX_VALUE))
@@ -206,19 +207,19 @@ public class PantallaAdmin extends javax.swing.JFrame {
 
     private void botonProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonProductosActionPerformed
         this.dispose();
-        GestionarProductos pantallaProductos = new GestionarProductos();
+        AgregarProducto pantallaProductos = new AgregarProducto();
         pantallaProductos.setVisible(true);
     }//GEN-LAST:event_botonProductosActionPerformed
 
     private void botonDescuentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDescuentosActionPerformed
         this.dispose();
-        GestionarDescuentos pantallaDescuentos = new GestionarDescuentos();
+        AgregarDescuento pantallaDescuentos = new AgregarDescuento();
         pantallaDescuentos.setVisible(true);
     }//GEN-LAST:event_botonDescuentosActionPerformed
 
     private void botonProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonProveedoresActionPerformed
         this.dispose();
-        GestionarProveedores pantallaProveedores = new GestionarProveedores();
+        AgregarProveedor pantallaProveedores = new AgregarProveedor();
         pantallaProveedores.setVisible(true);
     }//GEN-LAST:event_botonProveedoresActionPerformed
 
@@ -228,13 +229,13 @@ public class PantallaAdmin extends javax.swing.JFrame {
 
     private void botonUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonUsuariosActionPerformed
         this.dispose();
-        GestionarUsuarios pantallaDescuentos = new GestionarUsuarios();
+        AgregarUsuario pantallaDescuentos = new AgregarUsuario();
         pantallaDescuentos.setVisible(true);
     }//GEN-LAST:event_botonUsuariosActionPerformed
 
     private void botonOrdenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOrdenesActionPerformed
         this.dispose();
-        GestionarCompras pantallaCompras = new GestionarCompras();
+        AgregarCompra pantallaCompras = new AgregarCompra();
         pantallaCompras.setVisible(true);
     }//GEN-LAST:event_botonOrdenesActionPerformed
 
@@ -242,9 +243,11 @@ public class PantallaAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonRegresarActionPerformed
 
-    private void botonDescuentos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDescuentos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonDescuentos1ActionPerformed
+    private void botonReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReporteActionPerformed
+        this.dispose();
+        PantallaReporte pantallaReporte = new PantallaReporte();
+        pantallaReporte.setVisible(true);
+    }//GEN-LAST:event_botonReporteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,11 +290,11 @@ public class PantallaAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonClientes;
     private javax.swing.JButton botonDescuentos;
-    private javax.swing.JButton botonDescuentos1;
     private javax.swing.JButton botonOrdenes;
     private javax.swing.JButton botonProductos;
     private javax.swing.JButton botonProveedores;
     private javax.swing.JButton botonRegresar;
+    private javax.swing.JButton botonReporte;
     private javax.swing.JButton botonSolicitudes;
     private javax.swing.JButton botonUsuarios;
     private javax.swing.JButton botonVentas;

@@ -19,6 +19,7 @@ public class AgregarDescuento extends javax.swing.JFrame {
      */
     public AgregarDescuento() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -33,10 +34,10 @@ public class AgregarDescuento extends javax.swing.JFrame {
         titulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
+        campoPuntos = new javax.swing.JTextField();
         campoDistrito1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoProducto = new javax.swing.JTextField();
         botonModificar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
@@ -59,17 +60,17 @@ public class AgregarDescuento extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("Código");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
-        campoNombres1.setText("Puntos");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoPuntos.setText("Puntos");
+        campoPuntos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
+                campoPuntosActionPerformed(evt);
             }
         });
 
@@ -80,10 +81,10 @@ public class AgregarDescuento extends javax.swing.JFrame {
             }
         });
 
-        campoApellidos1.setText("Id Producto");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
+        campoProducto.setText("Id Producto");
+        campoProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoProductoActionPerformed(evt);
             }
         });
 
@@ -126,11 +127,11 @@ public class AgregarDescuento extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(titulo)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(campoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(layout.createSequentialGroup()
                             .addContainerGap()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,9 +151,9 @@ public class AgregarDescuento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
@@ -184,24 +185,28 @@ public class AgregarDescuento extends javax.swing.JFrame {
     }//GEN-LAST:event_tabAgregarMouseClicked
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
-       
+        if (!campoCodigo.getText().equals("") && !campoPuntos.getText().equals("") && !campoProducto.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Se agregó correctamente el descuento.", "Operación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonModificarActionPerformed
 
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
+    private void campoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoProductoActionPerformed
 
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
+    private void campoPuntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuntosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
+    }//GEN-LAST:event_campoPuntosActionPerformed
 
     private void campoDistrito1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDistrito1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDistrito1ActionPerformed
 
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,10 +277,10 @@ public class AgregarDescuento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
+    private javax.swing.JTextField campoCodigo;
     private javax.swing.JTextField campoDistrito1;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoNombres1;
+    private javax.swing.JTextField campoProducto;
+    private javax.swing.JTextField campoPuntos;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu tabAgregar;

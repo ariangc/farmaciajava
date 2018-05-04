@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -17,6 +19,7 @@ public class AgregarCompra extends javax.swing.JFrame {
      */
     public AgregarCompra() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,10 +34,10 @@ public class AgregarCompra extends javax.swing.JFrame {
         titulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoProv = new javax.swing.JTextField();
         botonAgregar = new javax.swing.JButton();
+        campoCodigo = new javax.swing.JTextField();
+        campoProductos = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -56,24 +59,18 @@ public class AgregarCompra extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+        campoProv.setText("Cod. Proveedor");
+        campoProv.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoProvFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoProvFocusLost(evt);
             }
         });
-
-        campoNombres1.setText("Cod. Proveedor");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoProv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
-            }
-        });
-
-        campoApellidos1.setText("Productos");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoProvActionPerformed(evt);
             }
         });
 
@@ -81,6 +78,41 @@ public class AgregarCompra extends javax.swing.JFrame {
         botonAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAgregarActionPerformed(evt);
+            }
+        });
+
+        campoCodigo.setText("Código");
+        campoCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoCodigoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoCodigoFocusLost(evt);
+            }
+        });
+        campoCodigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoCodigoMouseClicked(evt);
+            }
+        });
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigoActionPerformed(evt);
+            }
+        });
+
+        campoProductos.setText("Cod. Productos");
+        campoProductos.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoProductosFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoProductosFocusLost(evt);
+            }
+        });
+        campoProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProductosActionPerformed(evt);
             }
         });
 
@@ -114,11 +146,11 @@ public class AgregarCompra extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(titulo)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoProv, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(campoProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +168,9 @@ public class AgregarCompra extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoProv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonAgregar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -155,6 +187,22 @@ public class AgregarCompra extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+        if (!campoCodigo.getText().equals("") && !campoProv.getText().equals("") && !campoProductos.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Se agregó correctamente la orden de compra.", "Operación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_botonAgregarActionPerformed
+
+    private void campoProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProvActionPerformed
+        campoProv.getText();
+    }//GEN-LAST:event_campoProvActionPerformed
+
+    private void campoNombres1Clicked(java.awt.event.ActionEvent evt) {
+        campoProv.setText("");
+    }
+    
     private void tabBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabBuscarMouseClicked
         this.dispose();
         GestionarCompras pantallaCompras = new GestionarCompras();
@@ -162,24 +210,51 @@ public class AgregarCompra extends javax.swing.JFrame {
     }//GEN-LAST:event_tabBuscarMouseClicked
 
     private void tabAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabAgregarMouseClicked
- 
+
     }//GEN-LAST:event_tabAgregarMouseClicked
 
-    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+    private void campoProvFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoProvFocusGained
+        if (campoProv.getText() == "Cod. Proveedor") {
+            campoProv.setText("");
+        }
+    }//GEN-LAST:event_campoProvFocusGained
 
-    }//GEN-LAST:event_botonAgregarActionPerformed
+    private void campoProvFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoProvFocusLost
+     
+    }//GEN-LAST:event_campoProvFocusLost
 
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
+    private void campoCodigoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodigoFocusGained
+        if (campoCodigo.getText() == "Código") {
+            campoCodigo.setText("");
+        }
+    }//GEN-LAST:event_campoCodigoFocusGained
+
+    private void campoCodigoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodigoFocusLost
+
+    }//GEN-LAST:event_campoCodigoFocusLost
+
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
+     
+                
+    }//GEN-LAST:event_campoCodigoActionPerformed
+
+    private void campoProductosFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoProductosFocusGained
+        if (campoProductos.getText() == "Cod. Productos") {
+            campoProductos.setText("");
+        }
+    }//GEN-LAST:event_campoProductosFocusGained
+
+    private void campoProductosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoProductosFocusLost
+
+    }//GEN-LAST:event_campoProductosFocusLost
+
+    private void campoProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProductosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoProductosActionPerformed
 
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
-
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    private void campoCodigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoCodigoMouseClicked
+        
+    }//GEN-LAST:event_campoCodigoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -474,9 +549,9 @@ public class AgregarCompra extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAgregar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoNombres1;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoProductos;
+    private javax.swing.JTextField campoProv;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu tabAgregar;
