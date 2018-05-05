@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -17,6 +19,7 @@ public class AgregarUsuario extends javax.swing.JFrame {
      */
     public AgregarUsuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,12 +34,12 @@ public class AgregarUsuario extends javax.swing.JFrame {
         titulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
+        campoEmail = new javax.swing.JTextField();
+        campoDireccion = new javax.swing.JTextField();
         botonAgregar = new javax.swing.JButton();
-        campoDni2 = new javax.swing.JTextField();
-        campoNombres2 = new javax.swing.JTextField();
+        campoTelefono = new javax.swing.JTextField();
+        campoPuesto = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -58,24 +61,24 @@ public class AgregarUsuario extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("DNI");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
-        campoNombres1.setText("Email");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoEmail.setText("Email");
+        campoEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
+                campoEmailActionPerformed(evt);
             }
         });
 
-        campoApellidos1.setText("Dirección");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
+        campoDireccion.setText("Dirección");
+        campoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoDireccionActionPerformed(evt);
             }
         });
 
@@ -86,17 +89,17 @@ public class AgregarUsuario extends javax.swing.JFrame {
             }
         });
 
-        campoDni2.setText("Teléfono");
-        campoDni2.addActionListener(new java.awt.event.ActionListener() {
+        campoTelefono.setText("Teléfono");
+        campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni2ActionPerformed(evt);
+                campoTelefonoActionPerformed(evt);
             }
         });
 
-        campoNombres2.setText("Puesto");
-        campoNombres2.addActionListener(new java.awt.event.ActionListener() {
+        campoPuesto.setText("Puesto");
+        campoPuesto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres2ActionPerformed(evt);
+                campoPuestoActionPerformed(evt);
             }
         });
 
@@ -130,15 +133,15 @@ public class AgregarUsuario extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(titulo)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(campoPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,13 +159,13 @@ public class AgregarUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonAgregar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -190,28 +193,32 @@ public class AgregarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_tabAgregarMouseClicked
 
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-
+        if (!campoCodigo.getText().equals("") && !campoEmail.getText().equals("") && !campoDireccion.getText().equals("") && !campoTelefono.getText().equals("") && !campoPuesto.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Se agregó correctamente el usuario.", "Operación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonAgregarActionPerformed
 
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
+    private void campoDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoDireccionActionPerformed
 
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
+    private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
+    }//GEN-LAST:event_campoEmailActionPerformed
 
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
-    private void campoDni2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni2ActionPerformed
+    private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni2ActionPerformed
+    }//GEN-LAST:event_campoTelefonoActionPerformed
 
-    private void campoNombres2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres2ActionPerformed
+    private void campoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuestoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres2ActionPerformed
+    }//GEN-LAST:event_campoPuestoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,11 +321,11 @@ public class AgregarUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAgregar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoDni2;
-    private javax.swing.JTextField campoNombres1;
-    private javax.swing.JTextField campoNombres2;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoDireccion;
+    private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoPuesto;
+    private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu tabAgregar;

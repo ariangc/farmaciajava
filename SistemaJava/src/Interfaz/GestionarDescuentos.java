@@ -19,6 +19,7 @@ public class GestionarDescuentos extends javax.swing.JFrame {
      */
     public GestionarDescuentos() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,21 +32,22 @@ public class GestionarDescuentos extends javax.swing.JFrame {
     private void initComponents() {
 
         titulo = new javax.swing.JLabel();
-        campoDni = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         botonBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
         botonAceptar = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoPuntos2 = new javax.swing.JTextField();
+        campoProducto2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         botonModificar = new javax.swing.JButton();
         botonEliminar2 = new javax.swing.JButton();
-        campoApellidos2 = new javax.swing.JTextField();
+        campoDescripcion2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        campoPuntos = new javax.swing.JTextField();
+        campoProducto = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -55,15 +57,15 @@ public class GestionarDescuentos extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titulo.setText("Editar Descuentos");
 
-        campoDni.setText("Código");
-        campoDni.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("Código");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDniActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Escriba el código del descuento a editar:");
+        jLabel3.setText("Ingrese uno o más campos para buscar:");
 
         botonBuscar.setText("Buscar");
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -118,24 +120,17 @@ public class GestionarDescuentos extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoPuntos2.setText("Puntos");
+        campoPuntos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+                campoPuntos2ActionPerformed(evt);
             }
         });
 
-        campoNombres1.setText("Puntos");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoProducto2.setText("Id del producto");
+        campoProducto2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
-            }
-        });
-
-        campoApellidos1.setText("Id del producto");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoProducto2ActionPerformed(evt);
             }
         });
 
@@ -156,15 +151,29 @@ public class GestionarDescuentos extends javax.swing.JFrame {
             }
         });
 
-        campoApellidos2.setText("Descripción");
-        campoApellidos2.addActionListener(new java.awt.event.ActionListener() {
+        campoDescripcion2.setText("Descripción");
+        campoDescripcion2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos2ActionPerformed(evt);
+                campoDescripcion2ActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Seleccione un descuento:");
+
+        campoPuntos.setText("Puntos");
+        campoPuntos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoPuntosActionPerformed(evt);
+            }
+        });
+
+        campoProducto.setText("Id Producto");
+        campoProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProductoActionPerformed(evt);
+            }
+        });
 
         tabAgregar.setText("Agregar");
         tabAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -196,9 +205,14 @@ public class GestionarDescuentos extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoDni, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(titulo)))
+                            .addComponent(titulo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(botonRegresar)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(192, 192, 192)
@@ -208,19 +222,17 @@ public class GestionarDescuentos extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jLabel4)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(botonModificar)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(botonEliminar2))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addComponent(campoApellidos2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(campoDescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoPuntos2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoProducto2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -231,7 +243,10 @@ public class GestionarDescuentos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonBuscar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
@@ -243,11 +258,10 @@ public class GestionarDescuentos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoPuntos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoProducto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoApellidos2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoDescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificar)
@@ -260,12 +274,14 @@ public class GestionarDescuentos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDniActionPerformed
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDniActionPerformed
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-       
+        if (tablaClientes.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar una fila.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonAceptarActionPerformed
 
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
@@ -274,28 +290,30 @@ public class GestionarDescuentos extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
+    private void campoPuntos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuntos2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    }//GEN-LAST:event_campoPuntos2ActionPerformed
 
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
+    private void campoProducto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProducto2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
-
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoProducto2ActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
-        JOptionPane.showMessageDialog(null, "¿Seguro que quiere modificar este descuento?", "Eliminar", JOptionPane.DEFAULT_OPTION);
+        if (!campoPuntos2.getText().equals("") && !campoProducto.getText().equals("")) {
+            JOptionPane.showConfirmDialog(null, "¿Seguro que quiere modificar este descuento?", "Modificar", JOptionPane.YES_NO_OPTION);
+        } else {
+            JOptionPane.showMessageDialog(null, "Todos los datos deben tener un valor.", "Error", JOptionPane.ERROR_MESSAGE);     
+        }
     }//GEN-LAST:event_botonModificarActionPerformed
 
     private void botonEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminar2ActionPerformed
-        JOptionPane.showMessageDialog(null, "¿Seguro que quiere eliminar este cliente?", "Eliminar", JOptionPane.DEFAULT_OPTION);
+        JOptionPane.showConfirmDialog(null, "¿Seguro que quiere desactivar este descuento?", "Desactivar", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_botonEliminar2ActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-        // TODO add your handling code here:
+        if (campoCodigo.getText().equals("") && campoPuntos.getText().equals("") && campoProducto.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar al menos un dato.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void tabBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabBuscarMouseClicked
@@ -308,9 +326,17 @@ public class GestionarDescuentos extends javax.swing.JFrame {
         pantallaAgregar.setVisible(true);
     }//GEN-LAST:event_tabAgregarMouseClicked
 
-    private void campoApellidos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos2ActionPerformed
+    private void campoDescripcion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDescripcion2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos2ActionPerformed
+    }//GEN-LAST:event_campoDescripcion2ActionPerformed
+
+    private void campoPuntosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuntosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPuntosActionPerformed
+
+    private void campoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoProductoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -360,11 +386,12 @@ public class GestionarDescuentos extends javax.swing.JFrame {
     private javax.swing.JButton botonEliminar2;
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoApellidos2;
-    private javax.swing.JTextField campoDni;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoNombres1;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoDescripcion2;
+    private javax.swing.JTextField campoProducto;
+    private javax.swing.JTextField campoProducto2;
+    private javax.swing.JTextField campoPuntos;
+    private javax.swing.JTextField campoPuntos2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

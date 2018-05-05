@@ -5,10 +5,13 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Daniela Argumanis 20140445
  */
+
 public class PantallaReporte extends javax.swing.JFrame {
 
     /**
@@ -16,6 +19,7 @@ public class PantallaReporte extends javax.swing.JFrame {
      */
     public PantallaReporte() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -32,6 +36,7 @@ public class PantallaReporte extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        botonRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +71,15 @@ public class PantallaReporte extends javax.swing.JFrame {
             }
         });
 
+        botonRegresar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        botonRegresar.setText("< Regresar");
+        botonRegresar.setContentAreaFilled(false);
+        botonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,13 +97,16 @@ public class PantallaReporte extends javax.swing.JFrame {
                         .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(botonBuscar)))
+                        .addComponent(botonBuscar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, 0)
+                        .addComponent(botonRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -98,14 +115,16 @@ public class PantallaReporte extends javax.swing.JFrame {
                     .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonBuscar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonRegresar)
+                .addGap(5, 5, 5))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Se generó correctamente el reporte.", "Operación Exitosa", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -119,6 +138,12 @@ public class PantallaReporte extends javax.swing.JFrame {
     private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField2ActionPerformed
+
+    private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
+        this.dispose();
+        PantallaAdmin atras = new PantallaAdmin();
+        atras.setVisible(true);
+    }//GEN-LAST:event_botonRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,6 +183,7 @@ public class PantallaReporte extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonBuscar;
+    private javax.swing.JButton botonRegresar;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField2;

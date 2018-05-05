@@ -7,7 +7,6 @@ package Interfaz;
 
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author alulab14
@@ -19,6 +18,7 @@ public class GestionarCompras extends javax.swing.JFrame {
      */
     public GestionarCompras() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,21 +31,35 @@ public class GestionarCompras extends javax.swing.JFrame {
     private void initComponents() {
 
         titulo = new javax.swing.JLabel();
-        campoDni = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         botonBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
         botonAceptar = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoProveedor2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         botonModificar = new javax.swing.JButton();
-        botonEliminar2 = new javax.swing.JButton();
-        campoDni2 = new javax.swing.JTextField();
+        botonAnular = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        campoProveedores = new javax.swing.JTextField();
+        campoFecha = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        campoCodProd = new javax.swing.JTextField();
+        campoNombre = new javax.swing.JTextField();
+        campoSintomas = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaClientes1 = new javax.swing.JTable();
+        jLabel7 = new javax.swing.JLabel();
+        campoCantidad = new javax.swing.JTextField();
+        campoFV = new javax.swing.JTextField();
+        botonAgregar = new javax.swing.JButton();
+        botonBuscar1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tablaClientes2 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        botonQuitar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -55,15 +69,15 @@ public class GestionarCompras extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titulo.setText("Editar Órdenes de Compra");
 
-        campoDni.setText("Código");
-        campoDni.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("Código");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDniActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Escriba el código de la orden a editar:");
+        jLabel3.setText("Ingrese uno o más datos para buscar una órden de compra:");
 
         botonBuscar.setText("Buscar");
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +115,6 @@ public class GestionarCompras extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tablaClientes);
-        tablaClientes.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         botonAceptar.setText("Aceptar");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -119,24 +132,10 @@ public class GestionarCompras extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoProveedor2.setText("Cod. Proveedor");
+        campoProveedor2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
-            }
-        });
-
-        campoNombres1.setText("Cod. Proveedor");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
-            }
-        });
-
-        campoApellidos1.setText("Productos");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoProveedor2ActionPerformed(evt);
             }
         });
 
@@ -150,22 +149,219 @@ public class GestionarCompras extends javax.swing.JFrame {
             }
         });
 
-        botonEliminar2.setText("Anular");
-        botonEliminar2.addActionListener(new java.awt.event.ActionListener() {
+        botonAnular.setText("Anular");
+        botonAnular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEliminar2ActionPerformed(evt);
-            }
-        });
-
-        campoDni2.setText("Fecha");
-        campoDni2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni2ActionPerformed(evt);
+                botonAnularActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Seleccione una orden:");
+
+        campoProveedores.setText("Cod. Proveedor");
+        campoProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProveedoresActionPerformed(evt);
+            }
+        });
+
+        campoFecha.setText("Fecha");
+        campoFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoFechaActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Agregar Producto:");
+
+        campoCodProd.setText("Cod. Prod");
+        campoCodProd.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoCodProdFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoCodProdFocusLost(evt);
+            }
+        });
+        campoCodProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoCodProdMouseClicked(evt);
+            }
+        });
+        campoCodProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodProdActionPerformed(evt);
+            }
+        });
+
+        campoNombre.setText("Nombre");
+        campoNombre.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoNombreFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoNombreFocusLost(evt);
+            }
+        });
+        campoNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoNombreMouseClicked(evt);
+            }
+        });
+        campoNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNombreActionPerformed(evt);
+            }
+        });
+
+        campoSintomas.setText("Síntomas");
+        campoSintomas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoSintomasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoSintomasFocusLost(evt);
+            }
+        });
+        campoSintomas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoSintomasMouseClicked(evt);
+            }
+        });
+        campoSintomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSintomasActionPerformed(evt);
+            }
+        });
+
+        tablaClientes1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nombre", "Síntomas", "Precio", "Prescripción"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablaClientes1);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setText("Datos del producto:");
+
+        campoCantidad.setText("Cantidad");
+        campoCantidad.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoCantidadFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoCantidadFocusLost(evt);
+            }
+        });
+        campoCantidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoCantidadMouseClicked(evt);
+            }
+        });
+        campoCantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCantidadActionPerformed(evt);
+            }
+        });
+
+        campoFV.setText("Fecha de vencimiento");
+        campoFV.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoFVFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoFVFocusLost(evt);
+            }
+        });
+        campoFV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoFVMouseClicked(evt);
+            }
+        });
+        campoFV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoFVActionPerformed(evt);
+            }
+        });
+
+        botonAgregar.setText("Agregar");
+        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarActionPerformed(evt);
+            }
+        });
+
+        botonBuscar1.setText("Buscar");
+        botonBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscar1ActionPerformed(evt);
+            }
+        });
+
+        tablaClientes2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nombre", "Síntomas", "Precio", "Prescripción", "Cantidad", "Fecha de vencimiento", "Quitar"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(tablaClientes2);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setText("Productos de la orden:");
+
+        botonQuitar.setText("Quitar Productos");
+        botonQuitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonQuitarActionPerformed(evt);
+            }
+        });
 
         tabAgregar.setText("Agregar");
         tabAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,36 +388,74 @@ public class GestionarCompras extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
-                        .addComponent(botonBuscar))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoDni, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(titulo)))
-                    .addComponent(botonRegresar)
+                            .addComponent(titulo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(campoProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(campoFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botonBuscar))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(192, 192, 192)
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(campoProveedor2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(31, 31, 31))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(campoCodProd)
+                                                .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(30, 30, 30)
+                                                .addComponent(botonBuscar1)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel7)
+                                            .addComponent(campoCantidad)
+                                            .addComponent(campoFV, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addComponent(botonAgregar)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jScrollPane1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(332, 332, 332)
                         .addComponent(botonAceptar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonRegresar)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(botonModificar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(botonEliminar2))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                                .addComponent(botonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botonAnular, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(botonQuitar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,10 +465,13 @@ public class GestionarCompras extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonBuscar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -242,30 +479,54 @@ public class GestionarCompras extends javax.swing.JFrame {
                 .addComponent(botonAceptar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campoProveedor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(11, 11, 11)
+                        .addComponent(campoCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoFV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonAgregar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(campoCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonBuscar1)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificar)
-                    .addComponent(botonEliminar2))
+                    .addComponent(botonAnular)
+                    .addComponent(botonQuitar))
                 .addGap(18, 18, 18)
-                .addComponent(botonRegresar))
+                .addComponent(botonRegresar)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    private void campoDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDniActionPerformed
+
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDniActionPerformed
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-       
+        if (tablaClientes.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar una fila.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonAceptarActionPerformed
 
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
@@ -274,32 +535,30 @@ public class GestionarCompras extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
+    private void campoProveedor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProveedor2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
-
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
-
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoProveedor2ActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
-        JOptionPane.showMessageDialog(null, "¿Seguro que quiere modificar esta compra?", "Eliminar", JOptionPane.DEFAULT_OPTION);
+        if (tablaClientes1.getComponentCount() == 0){
+            JOptionPane.showMessageDialog(null, "La orden de compra debe tener al menos un producto.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showConfirmDialog(null, "¿Seguro que quiere modificar esta orden de compra?", "Modificar", JOptionPane.YES_NO_OPTION);
+        }
     }//GEN-LAST:event_botonModificarActionPerformed
 
-    private void botonEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminar2ActionPerformed
-        JOptionPane.showMessageDialog(null, "¿Seguro que quiere eliminar este cliente?", "Eliminar", JOptionPane.DEFAULT_OPTION);
-    }//GEN-LAST:event_botonEliminar2ActionPerformed
+    private void botonAnularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAnularActionPerformed
+        JOptionPane.showConfirmDialog(null, "¿Seguro que quiere anular esta compra?", "Anular", JOptionPane.YES_NO_OPTION);
+    }//GEN-LAST:event_botonAnularActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-        // TODO add your handling code here:
+        if (campoCodigo.getText().equals("") && campoProveedores.getText().equals("") && campoFecha.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe ingresar al menos un dato.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     private void tabBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabBuscarMouseClicked
-        
+
     }//GEN-LAST:event_tabBuscarMouseClicked
 
     private void tabAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabAgregarMouseClicked
@@ -308,10 +567,110 @@ public class GestionarCompras extends javax.swing.JFrame {
         pantallaAgregar.setVisible(true);
     }//GEN-LAST:event_tabAgregarMouseClicked
 
-    private void campoDni2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni2ActionPerformed
+    private void campoProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProveedoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni2ActionPerformed
+    }//GEN-LAST:event_campoProveedoresActionPerformed
 
+    private void campoFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFechaActionPerformed
+
+    private void campoCodProdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodProdFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdFocusGained
+
+    private void campoCodProdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodProdFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdFocusLost
+
+    private void campoCodProdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoCodProdMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdMouseClicked
+
+    private void campoCodProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodProdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdActionPerformed
+
+    private void campoNombreFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNombreFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombreFocusGained
+
+    private void campoNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNombreFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombreFocusLost
+
+    private void campoNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoNombreMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombreMouseClicked
+
+    private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombreActionPerformed
+
+    private void campoSintomasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSintomasFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasFocusGained
+
+    private void campoSintomasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSintomasFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasFocusLost
+
+    private void campoSintomasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoSintomasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasMouseClicked
+
+    private void campoSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSintomasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasActionPerformed
+
+    private void campoCantidadFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCantidadFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCantidadFocusGained
+
+    private void campoCantidadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCantidadFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCantidadFocusLost
+
+    private void campoCantidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoCantidadMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCantidadMouseClicked
+
+    private void campoCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCantidadActionPerformed
+
+    private void campoFVFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoFVFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFVFocusGained
+
+    private void campoFVFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoFVFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFVFocusLost
+
+    private void campoFVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoFVMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFVMouseClicked
+
+    private void campoFVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoFVActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFVActionPerformed
+
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+        if (tablaClientes1.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un producto.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        if (campoCantidad.getText().equals("") || campoFV.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_botonAgregarActionPerformed
+
+    private void botonBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscar1ActionPerformed
+
+    }//GEN-LAST:event_botonBuscar1ActionPerformed
+
+    private void botonQuitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonQuitarActionPerformed
+        JOptionPane.showConfirmDialog(null, "¿Seguro que quiere quitar estos productos?", "Quitar", JOptionPane.YES_NO_OPTION);
+    }//GEN-LAST:event_botonQuitarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -413,23 +772,37 @@ public class GestionarCompras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAceptar;
+    private javax.swing.JButton botonAgregar;
+    private javax.swing.JButton botonAnular;
     private javax.swing.JButton botonBuscar;
-    private javax.swing.JButton botonEliminar2;
+    private javax.swing.JButton botonBuscar1;
     private javax.swing.JButton botonModificar;
+    private javax.swing.JButton botonQuitar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoDni;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoDni2;
-    private javax.swing.JTextField campoNombres1;
+    private javax.swing.JTextField campoCantidad;
+    private javax.swing.JTextField campoCodProd;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoFV;
+    private javax.swing.JTextField campoFecha;
+    private javax.swing.JTextField campoNombre;
+    private javax.swing.JTextField campoProveedor2;
+    private javax.swing.JTextField campoProveedores;
+    private javax.swing.JTextField campoSintomas;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JMenu tabAgregar;
     private javax.swing.JMenu tabBuscar;
     private javax.swing.JTable tablaClientes;
+    private javax.swing.JTable tablaClientes1;
+    private javax.swing.JTable tablaClientes2;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -17,6 +19,7 @@ public class AgregarProducto extends javax.swing.JFrame {
      */
     public AgregarProducto() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,12 +34,12 @@ public class AgregarProducto extends javax.swing.JFrame {
         titulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
+        campoNombre = new javax.swing.JTextField();
+        campoSintomas = new javax.swing.JTextField();
         botonAgregar = new javax.swing.JButton();
-        campoDni2 = new javax.swing.JTextField();
-        campoNombres2 = new javax.swing.JTextField();
+        campoPrecio = new javax.swing.JTextField();
+        campoPrescripcion = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -58,24 +61,24 @@ public class AgregarProducto extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("Código");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
-        campoNombres1.setText("Nombre");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoNombre.setText("Nombre");
+        campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
+                campoNombreActionPerformed(evt);
             }
         });
 
-        campoApellidos1.setText("Síntomas");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
+        campoSintomas.setText("Síntomas");
+        campoSintomas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoSintomasActionPerformed(evt);
             }
         });
 
@@ -86,17 +89,17 @@ public class AgregarProducto extends javax.swing.JFrame {
             }
         });
 
-        campoDni2.setText("Precio");
-        campoDni2.addActionListener(new java.awt.event.ActionListener() {
+        campoPrecio.setText("Precio");
+        campoPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni2ActionPerformed(evt);
+                campoPrecioActionPerformed(evt);
             }
         });
 
-        campoNombres2.setText("Prescripción");
-        campoNombres2.addActionListener(new java.awt.event.ActionListener() {
+        campoPrescripcion.setText("Prescripción");
+        campoPrescripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres2ActionPerformed(evt);
+                campoPrescripcionActionPerformed(evt);
             }
         });
 
@@ -130,15 +133,15 @@ public class AgregarProducto extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(titulo)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(campoPrescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,13 +159,13 @@ public class AgregarProducto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDni2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoNombres2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoPrescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonAgregar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -186,32 +189,36 @@ public class AgregarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_tabBuscarMouseClicked
 
     private void tabAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabAgregarMouseClicked
- 
+        
     }//GEN-LAST:event_tabAgregarMouseClicked
 
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-
+        if (!campoCodigo.getText().equals("") && !campoNombre.getText().equals("") && !campoSintomas.getText().equals("") && !campoPrecio.getText().equals("") && !campoPrescripcion.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Se agregó correctamente el producto.", "Operación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_botonAgregarActionPerformed
 
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
+    private void campoSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSintomasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
+    }//GEN-LAST:event_campoSintomasActionPerformed
 
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
+    private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
+    }//GEN-LAST:event_campoNombreActionPerformed
 
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
+    private void campoPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrecioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    }//GEN-LAST:event_campoPrecioActionPerformed
 
-    private void campoDni2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni2ActionPerformed
+    private void campoPrescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrescripcionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni2ActionPerformed
+    }//GEN-LAST:event_campoPrescripcionActionPerformed
 
-    private void campoNombres2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres2ActionPerformed
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres2ActionPerformed
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -378,11 +385,11 @@ public class AgregarProducto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAgregar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoDni2;
-    private javax.swing.JTextField campoNombres1;
-    private javax.swing.JTextField campoNombres2;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoNombre;
+    private javax.swing.JTextField campoPrecio;
+    private javax.swing.JTextField campoPrescripcion;
+    private javax.swing.JTextField campoSintomas;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu tabAgregar;

@@ -19,6 +19,7 @@ public class AgregarProveedor extends javax.swing.JFrame {
      */
     public AgregarProveedor() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -33,11 +34,23 @@ public class AgregarProveedor extends javax.swing.JFrame {
         titulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
-        campoDni1 = new javax.swing.JTextField();
-        campoNombres1 = new javax.swing.JTextField();
-        campoDistrito1 = new javax.swing.JTextField();
-        campoApellidos1 = new javax.swing.JTextField();
+        campoCodigo = new javax.swing.JTextField();
+        campoNombre = new javax.swing.JTextField();
+        campoTelefono = new javax.swing.JTextField();
+        campoDireccion = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        campoCodProd = new javax.swing.JTextField();
+        campoNombre1 = new javax.swing.JTextField();
+        campoSintomas = new javax.swing.JTextField();
+        botonBuscar1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaClientes1 = new javax.swing.JTable();
         botonModificar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tablaClientes2 = new javax.swing.JTable();
+        botonQuitar = new javax.swing.JButton();
+        botonConfirmar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -59,38 +72,180 @@ public class AgregarProveedor extends javax.swing.JFrame {
             }
         });
 
-        campoDni1.setText("Código");
-        campoDni1.addActionListener(new java.awt.event.ActionListener() {
+        campoCodigo.setText("RUC");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDni1ActionPerformed(evt);
+                campoCodigoActionPerformed(evt);
             }
         });
 
-        campoNombres1.setText("Nombre");
-        campoNombres1.addActionListener(new java.awt.event.ActionListener() {
+        campoNombre.setText("Nombre");
+        campoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoNombres1ActionPerformed(evt);
+                campoNombreActionPerformed(evt);
             }
         });
 
-        campoDistrito1.setText("Teléfono");
-        campoDistrito1.addActionListener(new java.awt.event.ActionListener() {
+        campoTelefono.setText("Teléfono");
+        campoTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDistrito1ActionPerformed(evt);
+                campoTelefonoActionPerformed(evt);
             }
         });
 
-        campoApellidos1.setText("Dirección");
-        campoApellidos1.addActionListener(new java.awt.event.ActionListener() {
+        campoDireccion.setText("Dirección");
+        campoDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoApellidos1ActionPerformed(evt);
+                campoDireccionActionPerformed(evt);
             }
         });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setText("Agregar Producto:");
+
+        campoCodProd.setText("Cod. Prod");
+        campoCodProd.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoCodProdFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoCodProdFocusLost(evt);
+            }
+        });
+        campoCodProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoCodProdMouseClicked(evt);
+            }
+        });
+        campoCodProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodProdActionPerformed(evt);
+            }
+        });
+
+        campoNombre1.setText("Nombre");
+        campoNombre1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoNombre1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoNombre1FocusLost(evt);
+            }
+        });
+        campoNombre1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoNombre1MouseClicked(evt);
+            }
+        });
+        campoNombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNombre1ActionPerformed(evt);
+            }
+        });
+
+        campoSintomas.setText("Síntomas");
+        campoSintomas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                campoSintomasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                campoSintomasFocusLost(evt);
+            }
+        });
+        campoSintomas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                campoSintomasMouseClicked(evt);
+            }
+        });
+        campoSintomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoSintomasActionPerformed(evt);
+            }
+        });
+
+        botonBuscar1.setText("Buscar");
+        botonBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscar1ActionPerformed(evt);
+            }
+        });
+
+        tablaClientes1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nombre", "Síntomas", "Precio", "Prescripción", "Seleccionar"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablaClientes1);
 
         botonModificar.setText("Agregar");
         botonModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonModificarActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setText("Productos del proveedor:");
+
+        tablaClientes2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nombre", "Síntomas", "Precio", "Prescripción", "Cantidad", "Fecha de vencimiento", "Quitar"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(tablaClientes2);
+
+        botonQuitar.setText("Quitar Productos");
+
+        botonConfirmar.setText("Confirmar");
+        botonConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonConfirmarActionPerformed(evt);
             }
         });
 
@@ -121,21 +276,37 @@ public class AgregarProveedor extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonModificar)
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(campoCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(botonBuscar1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel3)
                             .addComponent(titulo)
-                            .addComponent(botonModificar)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoDistrito1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(botonConfirmar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(botonQuitar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(22, 22, 22)
                         .addComponent(botonRegresar)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,19 +315,35 @@ public class AgregarProveedor extends javax.swing.JFrame {
                 .addComponent(titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(campoDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(campoNombres1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(campoApellidos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(campoDistrito1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonBuscar1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonModificar)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonQuitar)
+                    .addComponent(botonConfirmar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonRegresar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
 
         pack();
@@ -178,25 +365,93 @@ public class AgregarProveedor extends javax.swing.JFrame {
  
     }//GEN-LAST:event_tabAgregarMouseClicked
 
+    private void campoDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDireccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDireccionActionPerformed
+
+    private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombreActionPerformed
+
+    private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoTelefonoActionPerformed
+
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigoActionPerformed
+
+    private void campoCodProdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodProdFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdFocusGained
+
+    private void campoCodProdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodProdFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdFocusLost
+
+    private void campoCodProdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoCodProdMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdMouseClicked
+
+    private void campoCodProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodProdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodProdActionPerformed
+
+    private void campoNombre1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNombre1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombre1FocusGained
+
+    private void campoNombre1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoNombre1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombre1FocusLost
+
+    private void campoNombre1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoNombre1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombre1MouseClicked
+
+    private void campoNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNombre1ActionPerformed
+
+    private void campoSintomasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSintomasFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasFocusGained
+
+    private void campoSintomasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoSintomasFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasFocusLost
+
+    private void campoSintomasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoSintomasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasMouseClicked
+
+    private void campoSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSintomasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoSintomasActionPerformed
+
+    private void botonBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscar1ActionPerformed
+
+    }//GEN-LAST:event_botonBuscar1ActionPerformed
+
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
 
     }//GEN-LAST:event_botonModificarActionPerformed
 
-    private void campoApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoApellidos1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoApellidos1ActionPerformed
-
-    private void campoNombres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombres1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoNombres1ActionPerformed
-
-    private void campoDistrito1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDistrito1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDistrito1ActionPerformed
-
-    private void campoDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDni1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoDni1ActionPerformed
+    private void botonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarActionPerformed
+        Boolean flag = true;
+        if (campoCodigo.getText().equals("") || campoNombre.getText().equals("") || campoDireccion.getText().equals("") || campoTelefono.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+            flag = false;
+        }
+        if (tablaClientes1.getComponentCount() == 0){
+            JOptionPane.showMessageDialog(null, "El proveedor debe tener al menos un producto.", "Error", JOptionPane.ERROR_MESSAGE);
+            flag = false;
+        }
+        if (flag == true) {
+            JOptionPane.showConfirmDialog(null, "¿Confirma que desea agregar el proveedor?", "Agregar", JOptionPane.YES_NO_OPTION);
+        }
+        flag = true;      
+    }//GEN-LAST:event_botonConfirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,16 +496,28 @@ public class AgregarProveedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBuscar1;
+    private javax.swing.JButton botonConfirmar;
     private javax.swing.JButton botonModificar;
+    private javax.swing.JButton botonQuitar;
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JTextField campoApellidos1;
-    private javax.swing.JTextField campoDistrito1;
-    private javax.swing.JTextField campoDni1;
-    private javax.swing.JTextField campoNombres1;
+    private javax.swing.JTextField campoCodProd;
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoDireccion;
+    private javax.swing.JTextField campoNombre;
+    private javax.swing.JTextField campoNombre1;
+    private javax.swing.JTextField campoSintomas;
+    private javax.swing.JTextField campoTelefono;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JMenu tabAgregar;
     private javax.swing.JMenu tabBuscar;
+    private javax.swing.JTable tablaClientes1;
+    private javax.swing.JTable tablaClientes2;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }
