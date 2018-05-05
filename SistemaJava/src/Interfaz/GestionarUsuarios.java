@@ -39,6 +39,10 @@ public class GestionarUsuarios extends javax.swing.JFrame {
         tablaClientes = new javax.swing.JTable();
         botonAceptar = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
+<<<<<<< HEAD
+=======
+        campoCodigo2 = new javax.swing.JTextField();
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoEmail2 = new javax.swing.JTextField();
         campoDireccion2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -60,7 +64,11 @@ public class GestionarUsuarios extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titulo.setText("Editar Usuarios");
 
+<<<<<<< HEAD
         campoCodigo.setText("DNI");
+=======
+        campoCodigo.setText("Código");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 campoCodigoFocusGained(evt);
@@ -73,7 +81,11 @@ public class GestionarUsuarios extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+<<<<<<< HEAD
         jLabel3.setText("Ingrese uno o más datos para buscar un usuario:");
+=======
+        jLabel3.setText("Ingresa uno o más campos para buscar:");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
 
         botonBuscar.setText("Buscar");
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +140,16 @@ public class GestionarUsuarios extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
+=======
+        campoCodigo2.setText("Código");
+        campoCodigo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigo2ActionPerformed(evt);
+            }
+        });
+
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoEmail2.setText("Email");
         campoEmail2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,19 +276,35 @@ public class GestionarUsuarios extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                                 .addComponent(campoEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                                .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoPuesto2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botonModificar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botonEliminar2))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                             .addComponent(jLabel5)
                             .addComponent(campoPuesto2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+=======
+                            .addComponent(jLabel5))))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -294,11 +332,21 @@ public class GestionarUsuarios extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(campoEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoPuesto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                    .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoPuesto2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificar)
@@ -327,6 +375,13 @@ public class GestionarUsuarios extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void campoCodigo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigo2ActionPerformed
+
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private void campoEmail2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmail2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoEmail2ActionPerformed
@@ -336,7 +391,11 @@ public class GestionarUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_campoDireccion2ActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
+<<<<<<< HEAD
         if (!campoEmail2.getText().equals("") && !campoDireccion2.getText().equals("") && !campoTelefono2.getText().equals("") && !campoPuesto2.getText().equals("")) {
+=======
+        if (!campoCodigo2.getText().equals("") && !campoEmail2.getText().equals("") && !campoDireccion2.getText().equals("") && !campoTelefono2.getText().equals("") && !campoPuesto2.getText().equals("")) {
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
             JOptionPane.showConfirmDialog(null, "¿Seguro que quiere modificar este usuario?", "Eliminar", JOptionPane.YES_NO_OPTION);
         } else {
             JOptionPane.showMessageDialog(null, "Todos los datos deben tener un valor.", "Error", JOptionPane.ERROR_MESSAGE);     
@@ -348,8 +407,13 @@ public class GestionarUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEliminar2ActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+<<<<<<< HEAD
         if (campoCodigo.getText().equals("") && campoEmail.getText().equals("") && campoDireccion.getText().equals("") && campoTelefono.getText().equals("")&& campoPuesto.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Debe ingresar al menos un dato.", "Error", JOptionPane.ERROR_MESSAGE);
+=======
+        if (campoCodigo.getText().equals("") || campoEmail.getText().equals("") || campoDireccion.getText().equals("") || campoTelefono.getText().equals("") || campoPuesto.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         }
     }//GEN-LAST:event_botonBuscarActionPerformed
 
@@ -368,6 +432,7 @@ public class GestionarUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTelefono2ActionPerformed
 
     private void campoPuesto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuesto2ActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
     }//GEN-LAST:event_campoPuesto2ActionPerformed
 
@@ -381,6 +446,21 @@ public class GestionarUsuarios extends javax.swing.JFrame {
 
     private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
         // TODO add your handling code here:
+=======
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPuesto2ActionPerformed
+
+    private void campoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoEmailActionPerformed
+
+    private void campoDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDireccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDireccionActionPerformed
+
+    private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
+        // TODO add your handling code here:
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     }//GEN-LAST:event_campoTelefonoActionPerformed
 
     private void campoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPuestoActionPerformed
@@ -450,6 +530,10 @@ public class GestionarUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonRegresar;
     private javax.swing.JTextField campoCodigo;
+<<<<<<< HEAD
+=======
+    private javax.swing.JTextField campoCodigo2;
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private javax.swing.JTextField campoDireccion;
     private javax.swing.JTextField campoDireccion2;
     private javax.swing.JTextField campoEmail;

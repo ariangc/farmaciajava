@@ -208,6 +208,7 @@ public class AgregarProducto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNombreActionPerformed
 
+<<<<<<< HEAD
     private void campoPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrecioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoPrecioActionPerformed
@@ -219,6 +220,19 @@ public class AgregarProducto extends javax.swing.JFrame {
     private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCodigoActionPerformed
+=======
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigoActionPerformed
+
+    private void campoPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrecioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPrecioActionPerformed
+
+    private void campoPrescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoPrescripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoPrescripcionActionPerformed
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
 
     /**
      * @param args the command line arguments

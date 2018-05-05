@@ -39,6 +39,10 @@ public class GestionarProveedores extends javax.swing.JFrame {
         tablaClientes = new javax.swing.JTable();
         botonAceptar = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
+<<<<<<< HEAD
+=======
+        campoCodigo2 = new javax.swing.JTextField();
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoNombre2 = new javax.swing.JTextField();
         campoTelefono2 = new javax.swing.JTextField();
         campoDireccion2 = new javax.swing.JTextField();
@@ -49,6 +53,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
         campoNombre = new javax.swing.JTextField();
         campoDireccion = new javax.swing.JTextField();
         campoTelefono = new javax.swing.JTextField();
+<<<<<<< HEAD
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClientes1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
@@ -61,6 +66,10 @@ public class GestionarProveedores extends javax.swing.JFrame {
         tablaClientes2 = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
         botonEliminar3 = new javax.swing.JButton();
+=======
+        campoProductos = new javax.swing.JTextField();
+        campoProductos2 = new javax.swing.JTextField();
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         jMenuBar1 = new javax.swing.JMenuBar();
         tabAgregar = new javax.swing.JMenu();
         tabBuscar = new javax.swing.JMenu();
@@ -70,7 +79,11 @@ public class GestionarProveedores extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         titulo.setText("Editar Proveedores");
 
+<<<<<<< HEAD
         campoCodigo.setText("RUC");
+=======
+        campoCodigo.setText("Código");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCodigoActionPerformed(evt);
@@ -133,6 +146,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         campoNombre2.setText("Nombre");
         campoNombre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +164,32 @@ public class GestionarProveedores extends javax.swing.JFrame {
         campoDireccion2.setText("Dirección");
         campoDireccion2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+=======
+        campoCodigo2.setText("Código");
+        campoCodigo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigo2ActionPerformed(evt);
+            }
+        });
+
+        campoNombre2.setText("Nombre");
+        campoNombre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNombre2ActionPerformed(evt);
+            }
+        });
+
+        campoTelefono2.setText("Teléfono");
+        campoTelefono2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoTelefono2ActionPerformed(evt);
+            }
+        });
+
+        campoDireccion2.setText("Dirección");
+        campoDireccion2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 campoDireccion2ActionPerformed(evt);
             }
         });
@@ -172,7 +212,11 @@ public class GestionarProveedores extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+<<<<<<< HEAD
         jLabel5.setText("Ingrese uno o más datos para buscar un proveedor:");
+=======
+        jLabel5.setText("Ingresa uno o más campos para buscar:");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
 
         campoNombre.setText("Nombre");
         campoNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -195,6 +239,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         tablaClientes1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -339,6 +384,19 @@ public class GestionarProveedores extends javax.swing.JFrame {
         botonEliminar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonEliminar3ActionPerformed(evt);
+=======
+        campoProductos.setText("Cod. Productos");
+        campoProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProductosActionPerformed(evt);
+            }
+        });
+
+        campoProductos2.setText("Cod. Productos");
+        campoProductos2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoProductos2ActionPerformed(evt);
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
             }
         });
 
@@ -374,6 +432,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
                     .addComponent(botonModificar)
                     .addComponent(jLabel8)
                     .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addComponent(botonModificar1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botonEliminar2)
@@ -392,6 +451,23 @@ public class GestionarProveedores extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(titulo)
+=======
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel3)
+                            .addComponent(titulo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(campoProductos2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
@@ -403,6 +479,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                                 .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -413,6 +490,26 @@ public class GestionarProveedores extends javax.swing.JFrame {
                         .addComponent(botonAceptar, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(33, 33, 33))
+=======
+                                .addGap(159, 159, 159)
+                                .addComponent(botonAceptar))
+                            .addComponent(jLabel5)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campoProductos))))
+                    .addComponent(botonRegresar)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addComponent(botonBuscar)))
+                .addContainerGap(52, Short.MAX_VALUE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,7 +523,12 @@ public class GestionarProveedores extends javax.swing.JFrame {
                     .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                     .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                    .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonBuscar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -437,7 +539,21 @@ public class GestionarProveedores extends javax.swing.JFrame {
                 .addComponent(botonAceptar)
                 .addGap(13, 13, 13)
                 .addComponent(jLabel4)
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+=======
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(campoTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoProductos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -488,6 +604,13 @@ public class GestionarProveedores extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void campoCodigo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigo2ActionPerformed
+
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private void campoNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombre2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNombre2ActionPerformed
@@ -501,7 +624,15 @@ public class GestionarProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_campoDireccion2ActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
+<<<<<<< HEAD
         
+=======
+        if (!campoCodigo2.getText().equals("") && !campoDireccion2.getText().equals("") && !campoNombre2.getText().equals("") && !campoTelefono2.getText().equals("") && !campoProductos2.getText().equals("")) {
+            JOptionPane.showConfirmDialog(null, "¿Seguro que quiere modificar este proveedor?", "Eliminar", JOptionPane.YES_NO_OPTION);
+        } else {
+            JOptionPane.showMessageDialog(null, "Todos los datos deben tener un valor.", "Error", JOptionPane.ERROR_MESSAGE);     
+        }
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     }//GEN-LAST:event_botonModificarActionPerformed
 
     private void botonEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminar2ActionPerformed
@@ -509,8 +640,13 @@ public class GestionarProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEliminar2ActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+<<<<<<< HEAD
         if (campoCodigo.getText().equals("") && campoNombre.getText().equals("") && campoDireccion.getText().equals("") && campoTelefono.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Debe llenar al menos un dato.", "Error", JOptionPane.ERROR_MESSAGE);
+=======
+        if (campoCodigo.getText().equals("") || campoNombre.getText().equals("") || campoDireccion.getText().equals("") || campoTelefono.getText().equals("") || campoProductos.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         }
     }//GEN-LAST:event_botonBuscarActionPerformed
 
@@ -536,6 +672,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoTelefonoActionPerformed
 
+<<<<<<< HEAD
     private void campoCodProdFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoCodProdFocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_campoCodProdFocusGained
@@ -599,6 +736,15 @@ public class GestionarProveedores extends javax.swing.JFrame {
     private void botonEliminar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminar3ActionPerformed
         JOptionPane.showConfirmDialog(null, "¿Seguro que quiere quitar estos productos?", "Quitar", JOptionPane.YES_NO_OPTION);
     }//GEN-LAST:event_botonEliminar3ActionPerformed
+=======
+    private void campoProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoProductosActionPerformed
+
+    private void campoProductos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoProductos2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoProductos2ActionPerformed
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
 
     /**
      * @param args the command line arguments
@@ -647,6 +793,7 @@ public class GestionarProveedores extends javax.swing.JFrame {
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonModificar1;
     private javax.swing.JButton botonRegresar;
+<<<<<<< HEAD
     private javax.swing.JTextField campoCodProd;
     private javax.swing.JTextField campoCodigo;
     private javax.swing.JTextField campoDireccion;
@@ -655,6 +802,16 @@ public class GestionarProveedores extends javax.swing.JFrame {
     private javax.swing.JTextField campoNombre1;
     private javax.swing.JTextField campoNombre2;
     private javax.swing.JTextField campoSintomas;
+=======
+    private javax.swing.JTextField campoCodigo;
+    private javax.swing.JTextField campoCodigo2;
+    private javax.swing.JTextField campoDireccion;
+    private javax.swing.JTextField campoDireccion2;
+    private javax.swing.JTextField campoNombre;
+    private javax.swing.JTextField campoNombre2;
+    private javax.swing.JTextField campoProductos;
+    private javax.swing.JTextField campoProductos2;
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JTextField campoTelefono2;
     private javax.swing.JLabel jLabel3;

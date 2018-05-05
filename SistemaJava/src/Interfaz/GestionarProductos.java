@@ -39,6 +39,10 @@ public class GestionarProductos extends javax.swing.JFrame {
         tablaClientes = new javax.swing.JTable();
         botonAceptar = new javax.swing.JButton();
         botonRegresar = new javax.swing.JButton();
+<<<<<<< HEAD
+=======
+        campoCodigo2 = new javax.swing.JTextField();
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoNombre2 = new javax.swing.JTextField();
         campoSintomas2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -67,7 +71,11 @@ public class GestionarProductos extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+<<<<<<< HEAD
         jLabel3.setText("Ingrese uno o más datos para buscar un producto:");
+=======
+        jLabel3.setText("Ingresa uno o más campos para buscar:");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
 
         botonBuscar.setText("Buscar");
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +130,7 @@ public class GestionarProductos extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         campoNombre2.setText("Nombre");
         campoNombre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +141,25 @@ public class GestionarProductos extends javax.swing.JFrame {
         campoSintomas2.setText("Síntomas");
         campoSintomas2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+=======
+        campoCodigo2.setText("Código");
+        campoCodigo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigo2ActionPerformed(evt);
+            }
+        });
+
+        campoNombre2.setText("Nombre");
+        campoNombre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNombre2ActionPerformed(evt);
+            }
+        });
+
+        campoSintomas2.setText("Síntomas");
+        campoSintomas2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 campoSintomas2ActionPerformed(evt);
             }
         });
@@ -239,19 +267,35 @@ public class GestionarProductos extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                                 .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoSintomas2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(campoPrecio2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                                .addComponent(campoPrecio2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoPrescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoSintomas2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(botonModificar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botonEliminar2))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                             .addComponent(jLabel5)
                             .addComponent(campoPrescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+=======
+                            .addComponent(jLabel5))))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -278,11 +322,21 @@ public class GestionarProductos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoSintomas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoPrecio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoPrescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                    .addComponent(campoCodigo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoSintomas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoPrecio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoPrescripcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificar)
@@ -311,6 +365,13 @@ public class GestionarProductos extends javax.swing.JFrame {
         atras.setVisible(true);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void campoCodigo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigo2ActionPerformed
+
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private void campoNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombre2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoNombre2ActionPerformed
@@ -320,7 +381,11 @@ public class GestionarProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_campoSintomas2ActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
+<<<<<<< HEAD
         if (!campoNombre2.getText().equals("") && !campoPrecio2.getText().equals("") && !campoPrescripcion2.getText().equals("") && !campoSintomas2.getText().equals("")) {
+=======
+        if (!campoCodigo2.getText().equals("") && !campoNombre2.getText().equals("") && !campoPrecio2.getText().equals("") && !campoPrescripcion2.getText().equals("") && !campoSintomas2.getText().equals("")) {
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
             JOptionPane.showConfirmDialog(null, "¿Seguro que quiere modificar este producto?", "Modificar", JOptionPane.YES_NO_OPTION);
         } else {
             JOptionPane.showMessageDialog(null, "Todos los datos deben tener un valor.", "Error", JOptionPane.ERROR_MESSAGE); 
@@ -332,8 +397,13 @@ public class GestionarProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEliminar2ActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+<<<<<<< HEAD
         if (campoCodigo.getText().equals("") && campoNombre.getText().equals("") && campoSintomas.getText().equals("") && campoPrecio.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Debe ingresar al menos un dato.", "Error", JOptionPane.ERROR_MESSAGE);
+=======
+        if (campoCodigo.getText().equals("") || campoNombre.getText().equals("") || campoSintomas.getText().equals("") || campoPrecio.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los datos.", "Error", JOptionPane.ERROR_MESSAGE);
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         }
     }//GEN-LAST:event_botonBuscarActionPerformed
 
@@ -440,6 +510,10 @@ public class GestionarProductos extends javax.swing.JFrame {
     private javax.swing.JButton botonModificar;
     private javax.swing.JButton botonRegresar;
     private javax.swing.JTextField campoCodigo;
+<<<<<<< HEAD
+=======
+    private javax.swing.JTextField campoCodigo2;
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
     private javax.swing.JTextField campoNombre;
     private javax.swing.JTextField campoNombre2;
     private javax.swing.JTextField campoPrecio;

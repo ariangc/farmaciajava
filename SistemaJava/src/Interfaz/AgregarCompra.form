@@ -52,6 +52,7 @@
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                               <Component id="campoProv" min="-2" pref="115" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -94,6 +95,13 @@
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
+=======
+                              <Component id="campoCodigo" min="-2" pref="115" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="campoProv" min="-2" pref="115" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="campoProductos" min="-2" pref="115" max="-2" attributes="0"/>
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
                           </Group>
                       </Group>
                   </Group>
@@ -161,8 +169,14 @@
               <Component id="jScrollPane2" min="-2" pref="92" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+<<<<<<< HEAD
                   <Component id="botonConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="botonQuitar" alignment="3" min="-2" max="-2" attributes="0"/>
+=======
+                  <Component id="campoProv" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="campoCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="campoProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="botonRegresar" min="-2" max="-2" attributes="0"/>
@@ -210,6 +224,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoProvActionPerformed"/>
       </Events>
     </Component>
+<<<<<<< HEAD
     <Component class="javax.swing.JButton" name="botonBuscar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
@@ -437,14 +452,35 @@
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="campoSintomasFocusLost"/>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="campoSintomasMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoSintomasActionPerformed"/>
-      </Events>
-    </Component>
+=======
     <Component class="javax.swing.JButton" name="botonAgregar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAgregarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="campoCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="campoCodigoFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="campoCodigoFocusLost"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="campoCodigoMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCodigoActionPerformed"/>
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="campoProductos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cod. Productos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="campoProductosFocusGained"/>
+        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="campoProductosFocusLost"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoProductosActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

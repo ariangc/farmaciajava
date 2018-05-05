@@ -61,7 +61,11 @@ public class AgregarUsuario extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         campoCodigo.setText("DNI");
+=======
+        campoCodigo.setText("Código");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCodigoActionPerformed(evt);

@@ -81,7 +81,11 @@ public class AgregarDescuento extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         campoProducto.setText("Cod. Producto");
+=======
+        campoProducto.setText("Id Producto");
+>>>>>>> eb22eced1f4c61f6d3ab120d2aba8737ac60cdaf
         campoProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoProductoActionPerformed(evt);
